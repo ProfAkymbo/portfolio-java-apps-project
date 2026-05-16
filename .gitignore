@@ -1,0 +1,31 @@
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/*.tfvars
+terraform/.terraform.lock.hcl
+
+# Ansible
+ansible/inventory/hosts.ini
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# AWS
+.aws/
+
+# Keys
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+
+.gradle/
+
+target/
+.git/
