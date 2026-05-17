@@ -78,7 +78,7 @@ jobs:
 
       - name: Terraform Init
         working-directory: ./terraform
-        run: terraform init -reconfigure
+        run: terraform init
 
       - name: Terraform Apply
         id: apply
@@ -136,9 +136,9 @@ jobs:
             docker rm java-app python-app || true
 
             # Run Java App on host port 8080 (Tomcat inside container uses 8080)
-            docker run -d -p 8080:8080 --name java-app ${{ secrets.DOCKER_USERNAME }}/portfolio-java-app:latest
+            docker run -d -p 8080:8080 --name java-app ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
 
             # Run Python App on host port 5000 (Gunicorn inside container uses 5000)
-            docker run -d -p 5000:5000 --name python-app ${{ secrets.DOCKER_USERNAME }}/portfolio-python-app:latest
+            docker run -d -p 5000:5000 --name python-app ${{ secrets.DOCKER_USERNAME }}/my-portfolio:latest
             
             EOD
