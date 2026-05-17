@@ -55,8 +55,8 @@ Add the following secrets to your repository:
 - `AWS_SECRET_ACCESS_KEY`  
 - `DOCKER_USERNAME`
 - `DOCKER_PASSWORD`
-- `TF_VAR_KEY_NAME`  
-- `EC2_SSH_KEY`
+- `TF_VAR_KEY_NAME`  for keypair name  
+- `EC2_SSH_KEY` for ssh private key  
 
 ## Commit and push the repo  
 
