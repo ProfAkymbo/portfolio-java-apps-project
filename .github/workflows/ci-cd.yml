@@ -78,12 +78,12 @@ jobs:
 
       - name: Terraform Init
         working-directory: ./terraform
-        run: terraform init -lock=false
+        run: terraform init -reconfigure
 
       - name: Terraform Apply
         id: apply
         working-directory: ./terraform
-        run: terraform apply -auto-approve -lock=false
+        run: terraform apply -auto-approve
         env:
           TF_VAR_key_name: ${{ secrets.TF_VAR_KEY_NAME }}
 
